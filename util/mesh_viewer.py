@@ -1,7 +1,7 @@
 import mpl_toolkits.mplot3d as a3
 import matplotlib.colors as colors
 import pylab as pl
-import numpy as np
+import numpy as np -y
 
 V = np.array
 r2h = lambda x: colors.rgb2hex(tuple(map(lambda y: y / 255., x)))
@@ -136,7 +136,9 @@ def view_meshes(*files, offset=.2):
         max_x_current = mesh[0][:, 0].max()
         mesh[0][:, 0] += max_x + offset
         plot = plot_mesh(mesh, surfaces, segments, plot=plot, show=file == files[-1])
+        # print(file == files[-1])
         max_x += max_x_current + offset
+    # print(plot)
 
 
 if __name__=='__main__':
